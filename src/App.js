@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import Person from './Person/Person';
 
 class App extends Component {
@@ -51,7 +52,9 @@ class App extends Component {
       color: 'white',
       font: 'inherit',
       border: '1px solid blue',
-      padding: '8px'
+      padding: '8px',
+      cursor: 'pointer',
+      
     };
 
     let persons = null;
@@ -73,6 +76,7 @@ class App extends Component {
       );
 
       style.backgroundColor = 'red';
+      
     }
 
     const classes = [];
@@ -85,6 +89,7 @@ class App extends Component {
     };
 
     return (
+
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p className={classes.join(' ')}>This is really working!</p>
@@ -94,13 +99,12 @@ class App extends Component {
         <button 
           style={style}
           onClick={this.togglePersonsHandler}>Toggle Persons</button>
-        { persons } 
-    
+        { persons }
       
       </div>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
-}
+};
 
-export default App;
+export default App
